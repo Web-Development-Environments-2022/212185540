@@ -17,7 +17,6 @@
 
 a
 {
-	
 	color: white;
 	text-decoration: none;
 }
@@ -51,4 +50,14 @@ h1 {
 #like
 {
 	text-align: center;
+}
+#qrcoder
+{
+	text-align: center;
+}
+#textinput
+{
+	height: 200px;
+	width: 600px;
+	font-size:14pt;
 }
