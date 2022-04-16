@@ -3,4 +3,4 @@
 LIDORZ55:שם המשתמש שלי בגיט
 
 :כתובת האתר 
-https://web-development-environments-2022.github.io/assignment1-LIDORZ55/
+https://web-development-environments-2022.github.io/212185540/
