@@ -2,6 +2,9 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" href="emojionearea.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="emojionearea.min.js"></script>
 </head>
 <body>
 <div id="menu">
@@ -21,7 +24,7 @@
 <br/>
 <br/>
 <br/>
-<h1>about me</h1>
+<h1>About Me</h1>
 </section>
 
 <section id="about_text" class="section">
@@ -134,17 +137,27 @@ If u want to like my page on facebook, feel free to follow/like!
 
 <section id="contact" class="section">
 <h1>Contact Me</h1>
-<form action="mailto:lidorzurzur@gmail.com" method="post" enctype="text/plain">
-  <label>Enter your mail content here:</label><br/>
-  <textarea name =" " rows="12" cols="35"></textarea><br/>
-  <input type="submit" value="Send Mail" />
-  <input type="reset" value="Clear" />
-</form>
+<label>Enter your mail subject here:</label><br/>
+<input type="text" id="mailsubject" name=" "><br><br>
+<label>Enter your mail body here:</label><br/>
+<textarea id="mailbody" name ="" rows="12" cols="35"></textarea><br/>
+<input type="button" value="Send Mail" onclick="sendMail()" />
 <br/>
 <br/>
 </section>
 
-
+<script type="text/javascript">
+  function sendMail(){
+    var text = document.getElementById("mailbody").value;
+    var subject = document.getElementById("mailsubject").value;
+    window.open("mailto:lidorzurzur@gmail.com?subject="+subject+"&body="+text)
+  }
+</script>
+<script>
+  $(document).ready(function(){
+    $("#mailbody").emojioneArea();
+  })
+</script>
 <script type="text/javascript">
 $(function(){
   $("#nav a").click(function(e){
